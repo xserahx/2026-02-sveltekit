@@ -1,0 +1,22 @@
+:root {
+  --color-surface: #05030e;
+  --color-surface-soft: #090713;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f4f2ff;
+  --color-muted: #9a94ab;
+  --color-purple: #a67dff;
+  --color-purple-soft: #9855B2;
+  --color-white-soft: rgba(255, 255, 255, 0.92);
+}
+
+html[data-theme='light'] {
+  --color-surface: #ffffff;
+  --color-surface-soft: #ffffff;
+  --color-border: rgba(19, 15, 50, 0.12);
+  --color-text: #181126;
+  --color-muted: #6f6b83;
+  --color-purple: #a67dff;
+  --color-purple-soft: #9855B2;
+  --color-white-soft: #ffffff;
+}
+

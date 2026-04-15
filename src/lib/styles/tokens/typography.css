@@ -1,6 +1,7 @@
 :root {
-  --font-primary: "Satoshi", sans-serif;
-  --font-secondary: "Inter", sans-serif;
+  --font-primary: "Poppins", sans-serif;
+  --font-heading: "Noto Serif Display", serif;
+  --font-secondary: "Poppins", sans-serif;
 
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
 }
