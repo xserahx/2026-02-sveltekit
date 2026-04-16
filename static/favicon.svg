@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <defs>
+    <linearGradient id="tab-favicon-gradient" x1="2.4" y1="2.1" x2="13.7" y2="12.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25481" stop-color="#AC76C1"/>
+      <stop offset="0.76923" stop-color="#4753B7"/>
+    </linearGradient>
+  </defs>
+  <circle cx="8" cy="8" r="7.25" fill="url(#tab-favicon-gradient)" stroke="#FBF9FF" stroke-width="1.5"/>
+</svg>
