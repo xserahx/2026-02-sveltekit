@@ -616,7 +616,8 @@
 	}
 
 	:global(html[data-theme='light']) .footer-link:hover {
-		color: #1d1d1d;
+		color: var(--color-purple-soft);
+		text-shadow: 0 0 14px color-mix(in srgb, var(--color-purple-soft) 28%, transparent);
 		opacity: 1;
 	}
 
