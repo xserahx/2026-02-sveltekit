@@ -92,7 +92,7 @@
 	<nav class="nav-links" aria-label="Primary navigation">
 		<a href="#about">About</a>
 		<a href="#hobby">Hobby</a>
-		<button class="theme-toggle" type="button" on:click={toggleTheme} aria-label="Toggle dark and light mode">
+		<button class="theme-toggle" type="button" onclick={toggleTheme} aria-label="Toggle dark and light mode">
 			{theme === 'dark' ? '☀️' : '🌙'}
 		</button>
 	</nav>
@@ -116,7 +116,7 @@
 					class:selected={selectedYear === year}
 					type="button"
 					aria-pressed={selectedYear === year}
-					on:click={() => (selectedYear = year)}
+					onclick={() => (selectedYear = year)}
 				>
 					{year}
 				</button>
@@ -171,7 +171,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.4rem 5rem;
+		padding: 1.4rem 3rem;
 		background: linear-gradient(90deg, rgba(166, 125, 255, 0.9) 4.8%, rgba(10, 10, 10, 0.95) 37%);
 		border-radius: 0;
 		box-shadow: none;
