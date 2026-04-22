@@ -197,7 +197,7 @@
 		position: relative;
 		font-family: var(--font-heading);
 		font-size: 0.95rem;
-		font-weight: 900;
+		font-weight: 600;
 		font-variation-settings: "wdth" 100;
 		text-transform: none;
 		letter-spacing: 0.26em;
@@ -398,7 +398,7 @@
 		padding: 0.5rem 1rem;
 		font-family: var(--font-heading);
 		font-size: clamp(1.25rem, 1.8vw, 1.5rem);
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 0.92;
 		letter-spacing: 0;
 		background: transparent;
