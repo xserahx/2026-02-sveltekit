@@ -88,10 +88,10 @@
 </script>
 
 <header class="topbar">
-	<div class="brand"><span>Ss</span><span class="dot">.</span></div>
+	<a class="brand" href="/"><span>Ss</span><span class="dot">.</span></a>
 	<nav class="nav-links" aria-label="Primary navigation">
-		<a href="#about">About</a>
-		<a href="#hobby">Hobby</a>
+		<a href="/about">About</a>
+		<a href="/hobby">Hobby</a>
 		<button class="theme-toggle" type="button" onclick={toggleTheme} aria-label="Toggle dark and light mode">
 			{theme === 'dark' ? '☀️' : '🌙'}
 		</button>
@@ -178,12 +178,22 @@
 	}
 
 	.brand {
+		display: inline-flex;
+		align-items: baseline;
 		font-family: var(--font-heading);
 		font-size: clamp(1.8rem, 2.3vw, 2.4rem);
 		font-weight: 100;
 		letter-spacing: 0;
 		color: var(--color-white-soft);
 		margin-left: -1rem;
+		text-decoration: none;
+	}
+
+	.brand:visited,
+	.brand:hover,
+	.brand:focus-visible {
+		color: var(--color-white-soft);
+		text-decoration: none;
 	}
 
 	.nav-links {
