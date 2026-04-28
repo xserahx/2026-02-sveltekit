@@ -1,5 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
+	import politecnicoLogo from '$lib/assets/images_cards/Politecnico_Bianco 1.png';
+	import returnHome from '$lib/assets/images_cards/return_home.jpeg';
+	import skySea from '$lib/assets/images_cards/sky_sea.jpg';
+	import japaneseSecretGarden from '$lib/assets/images_cards/japanese_secret_garden.jpeg';
+	import chineseNewYear from '$lib/assets/images_cards/chinese_new_year.jpg';
+	import elektra from '$lib/assets/images_cards/elektra.jpeg';
+	import amIWriter from '$lib/assets/images_cards/am_i_writer.jpeg';
+	import unknown from '$lib/assets/images_cards/the_unknown.jpg';
+	import darkLight from '$lib/assets/images_cards/oxymoron.jpeg';
+	import artistAmongArtists from '$lib/assets/images_cards/the_artist.jpg';
 
 	const years = ["2026", "2025", "2024"];
 	let selectedYear = $state("2026");
@@ -7,61 +17,61 @@
 
 	const gallery = [
 		{
-			src: "https://www.figma.com/api/mcp/asset/95575011-9291-473f-b961-7ea18d834b3f",
+			src: returnHome,
 			title: "Return Home",
 			subtitle: "Voyage in Pescara",
 			year: "2026"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/d277e29e-4b7b-4f4b-a7e8-7f7bfc463b89",
+			src: skySea,
 			title: "When Sky touched Sea",
 			subtitle: "Adriatic Sea, Pescara",
 			year: "2026"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/7e768e57-4fe0-404f-bc31-24dd65ebeb59",
+			src: chineseNewYear,
 			title: "Chinese New Year",
 			subtitle: "Milan",
 			year: "2026"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/a47581b7-950c-402d-a324-ee5200c71a27",
+			src: elektra,
 			title: "Elektra",
 			subtitle: "Gae Aulenti exhibition",
 			year: "2026"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/5b5c0e12-69fe-4778-8169-219afdaefcc7",
+			src: japaneseSecretGarden,
 			title: "Japanese Secret Garden",
 			subtitle: "Malta",
 			year: "2025"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/c8dbde01-b611-4a7b-9c2e-1bf0e84ca7c0",
+			src: amIWriter,
 			title: "Am I a writer?",
 			subtitle: "Me",
 			year: "2025"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/8264ebe0-a272-421b-816f-b6c841c073a6",
+			src: unknown,
 			title: "The Unknown",
 			subtitle: "Milan",
 			year: "2024"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/19486852-7908-4cc5-a7c1-7d784adbdfda",
+			src: darkLight,
 			title: "The oxymoron dark-light",
 			subtitle: "Gae Aulenti exhibition",
 			year: "2024"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/c7b6d275-2767-4b20-b01c-51f34bb517c6",
+			src: japaneseSecretGarden,
 			title: "Japanese Secret Garden",
 			subtitle: "Malta",
 			year: "2024"
 		},
 		{
-			src: "https://www.figma.com/api/mcp/asset/3902ed26-a2fd-4dca-8f4d-64d454d7b897",
+			src: artistAmongArtists,
 			title: "The Artist among Artists",
 			subtitle: "Van Gogh Museum, Trieste",
 			year: "2024"
@@ -101,10 +111,7 @@
 <section class="landing-shell">
 	<div class="hero-copy">
 		<p>
-			This landing page collects photographs created<br>
-			in a didactic context and transformed into small<br>
-			visual stories. They are exercises, yes, but also<br>
-			attempts to <span class="highlight">understand the world</span> through light,<br>
+			This landing page collects photographs created in a didactic context and transformed into small visual stories. They are exercises, yes, but also attempts to <span class="highlight">understand the world</span> through light,
 			silence, and the space between things.
 		</p>
 	</div>
@@ -146,7 +153,7 @@
 		<div class="footer-logo-wrap">
 			<img
 				class="footer-logo"
-				src="https://www.figma.com/api/mcp/asset/a8c85964-30a6-4f5d-9842-9283e5052482"
+				src={politecnicoLogo}
 				alt="Politecnico Milano 1863"
 				loading="lazy"
 			/>
@@ -613,7 +620,8 @@
 	}
 
 	:global(html[data-theme='light']) .footer-logo {
-		mix-blend-mode: exclusion;
+		mix-blend-mode: multiply;
+		filter: brightness(0.15) contrast(1.1);
 	}
 
 	:global(html[data-theme='light']) .footer-title {
@@ -638,52 +646,158 @@
 		}
 	}
 
-	@media (max-width: 680px) {
-		.landing-shell {
-			padding: 1.5rem 1.25rem;
-		}
-
-		.landing-content {
-			padding: 1.25rem 1.25rem 2rem;
-		}
-
+	@media (max-width: 1024px) {
 		.topbar {
-			flex-direction: column;
-			align-items: flex-start;
+			padding: 1.5rem 2.5rem;
+		}
+
+		.brand {
+			font-size: clamp(2.2rem, 4vw, 2.8rem);
+			margin-left: 0;
 		}
 
 		.nav-links {
-			gap: 1rem;
+			gap: 2.5rem;
+			margin-right: 0;
+		}
+
+		.nav-links a {
+			font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+			letter-spacing: -0.04em;
+			padding-bottom: 0;
+		}
+
+		.landing-content {
+			padding: 1rem 1.5rem 2.25rem;
 		}
 
 		.hero-copy {
-			margin-bottom: 1.75rem;
+			padding: 84px 24px 56px;
+			margin-bottom: 1rem;
+		}
+
+		.hero-copy p {
+			font-size: clamp(1.7rem, 3vw, 2.45rem);
+			line-height: 1.1;
+			max-width: 20ch;
+			text-wrap: balance;
 		}
 
 		.year-controls {
-			gap: 0.85rem;
-			flex-wrap: wrap;
+			gap: 0.9rem;
+			margin-bottom: 1.75rem;
 		}
 
-		.year-controls button {
-			font-size: 1.15rem;
-			padding: 0.45rem 0.85rem;
-		}
-
-		.card-text {
-			font-size: 1rem;
+		.gallery-card {
+			padding-bottom: 1.25rem;
 		}
 
 		.landing-footer {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.9rem;
-			padding: 1rem 1.25rem;
+			align-items: center;
+			padding: 1rem clamp(1.25rem, 5vw, 5rem);
+			gap: 1rem;
+		}
+	}
+
+	@media (max-width: 680px) {
+		.landing-shell {
+			padding: 0.75rem 0.75rem 0.6rem;
+		}
+
+		.landing-content {
+			padding: 0.75rem 0 1.25rem;
+		}
+
+		.topbar {
+			padding: 1rem 1.5rem;
+			align-items: center;
+		}
+
+		.nav-links {
+			gap: 1.25rem;
+			margin-right: 0;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+		}
+
+		.theme-toggle {
+			display: none;
+		}
+
+		.brand {
+			font-size: 1.95rem;
+		}
+
+		.nav-links a {
+			font-size: 1rem;
+			letter-spacing: -0.03em;
+			padding-bottom: 0;
+		}
+
+		.hero-copy {
+			padding: 52px 0 36px;
+			margin-bottom: 0.5rem;
+		}
+
+		.hero-copy p {
+			font-size: 1.1rem;
+			line-height: 1.16;
+			max-width: 100%;
+			text-wrap: pretty;
+		}
+
+		.year-controls {
+			gap: 0.5rem;
+			flex-wrap: wrap;
+			margin-bottom: 1.25rem;
+		}
+
+		.year-controls button {
+			font-size: 0.86rem;
+			padding: 0.34rem 0.68rem;
+		}
+
+		.gallery-grid {
+			row-gap: 0.65rem;
+		}
+
+		.gallery-card {
+			max-width: none;
+			padding-bottom: 1rem;
+		}
+
+		.card-image-wrap {
+			aspect-ratio: 1 / 0.64;
+		}
+
+		.card-meta {
+			padding: 0.6rem 0 0.75rem;
+		}
+
+		.card-text {
+			font-size: 0.8rem;
+			gap: 0.35rem;
+		}
+
+		.card-arrow {
+			width: 1.6rem;
+			height: 1.6rem;
+			font-size: 1.05rem;
+		}
+
+		.landing-footer {
+			justify-content: center;
+			align-items: center;
+			padding: 1.5rem 1.5rem 1.25rem;
 		}
 
 		.footer-contact {
-			align-items: flex-start;
-			text-align: left;
+			display: none;
+		}
+
+		.footer-logo-wrap {
+			width: 166px;
+			height: 65px;
 		}
 	}
 </style>

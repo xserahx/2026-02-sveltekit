@@ -2,6 +2,59 @@
 	import { onMount } from 'svelte';
 
 	let theme = $state('dark');
+	
+	const cards = [
+		{
+			title: 'Return Home',
+			location: 'Voyage in Pescara',
+			image: 'https://www.figma.com/api/mcp/asset/438956fc-1ce2-4942-b5cd-07f9ea073b80'
+		},
+		{
+			title: 'When Sky touched Sea',
+			location: 'Adriatic Sea, Pescara',
+			image: 'https://www.figma.com/api/mcp/asset/59bd0f87-fc5a-468f-951d-8d03b4990712'
+		},
+		{
+			title: 'Chinese New Year',
+			location: 'Milan',
+			image: 'https://www.figma.com/api/mcp/asset/6312f923-bb04-4fb7-ac34-8a1c2be4c69b'
+		},
+		{
+			title: 'Elektra',
+			location: 'Gae Aulenti exhibition',
+			image: 'https://www.figma.com/api/mcp/asset/66f64bc7-69bf-4b34-8096-e994eed2cc0d'
+		},
+		{
+			title: 'Japanese Secret Garden',
+			location: 'Malta',
+			image: 'https://www.figma.com/api/mcp/asset/7f7e00b0-2bb3-4522-8b74-e5bdc1019b8e'
+		},
+		{
+			title: 'Am I a writer?',
+			location: 'Me',
+			image: 'https://www.figma.com/api/mcp/asset/d1065f03-d7c3-4818-8ec1-c73ef37b2692'
+		},
+		{
+			title: 'The oxymoron dark-light',
+			location: 'Gae Aulenti exhibition',
+			image: 'https://www.figma.com/api/mcp/asset/a78c2eec-d9ec-46fd-8a6b-dba504bad36a'
+		},
+		{
+			title: 'Japanese Secret Garden',
+			location: 'Malta',
+			image: 'https://www.figma.com/api/mcp/asset/2eb1d6e2-b9da-45c3-a97b-a26d4348296f'
+		},
+		{
+			title: 'The Artist among Artists',
+			location: 'Van Gogh Museum, Trieste',
+			image: 'https://www.figma.com/api/mcp/asset/31c308a4-648c-4e8c-a41b-7105a92e9e1a'
+		},
+		{
+			title: 'The Unknown',
+			location: 'Milan',
+			image: 'https://www.figma.com/api/mcp/asset/b0f874f7-fcb0-440d-a714-fac2dca0ab11'
+		}
+	];
 
 	/** @param {'light' | 'dark'} value */
 	const applyTheme = (value) => {
@@ -70,9 +123,8 @@
 	.landing-shell {
 		min-height: 100vh;
 		padding: 0;
-		background: radial-gradient(circle at top left, rgba(166, 125, 255, 0.18), transparent 24%),
-			linear-gradient(180deg, var(--color-surface-soft), var(--color-surface));
-	}
+		background: radial-gradient(circle at top left, rgba(166, 125, 255, 0.18), transparent 24%),linear-gradient(180deg, var(--color-surface-soft), var(--color-surface));
+	} 
 
 	.topbar {
 		display: flex;
