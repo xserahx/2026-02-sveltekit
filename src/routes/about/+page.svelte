@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import politecnicoLogo from '$lib/assets/images_cards/Politecnico_Bianco 1.png';
 
 	let theme = $state('dark');
 
@@ -57,7 +58,7 @@
 		<div class="footer-logo-wrap">
 			<img
 				class="footer-logo"
-				src="https://www.figma.com/api/mcp/asset/a8c85964-30a6-4f5d-9842-9283e5052482"
+				src={politecnicoLogo}
 				alt="Politecnico Milano 1863"
 				loading="lazy"
 			/>
